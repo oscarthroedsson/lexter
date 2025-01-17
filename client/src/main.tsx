@@ -4,7 +4,7 @@ import "@/index.css";
 import App from "./App";
 
 import { BrowserRouter, Route, Routes } from "react-router";
-import Chat from "./pages/Chat/Chat";
+import Chat from "./pages/chat/Chat";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
