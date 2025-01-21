@@ -1,9 +1,11 @@
 {
   "files": [],
   "compilerOptions": {
+    "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["*"],
+      "@shared/*": ["../../shared/*"]
     }
   },
 
