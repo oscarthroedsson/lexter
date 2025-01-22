@@ -8,6 +8,7 @@ const socket = io(`http://localhost:3000`);
 
 export default function useChat(channel: StreamKey) {
   const [chatIsActive, setChatIsActive] = useState<boolean>(false);
+  const [answering, setAnswering] = useState<boolean>(false);
   const [conversation, setConversation] = useState<{ user: boolean; text: string }[]>([]);
 
   // Flytta den generiska typen K till startChat-funktionen
@@ -18,9 +19,11 @@ export default function useChat(channel: StreamKey) {
     setConversation((prev) => [...prev, { user: true, text: message }]);
     socket.emit(channel, message);
     setChatIsActive(true);
+    setAnswering(true);
 
     socket.on(channel, (response: string) => {
       console.log("Received data:", response); // Debug-loggning
+      setAnswering(false);
       setConversation((prev) => [...prev, { user: false, text: response }]);
     });
   }
@@ -34,5 +37,5 @@ export default function useChat(channel: StreamKey) {
     socket.off(channel); // Stoppa lyssnaren för kanalen
   }
 
-  return { startChat, stopStream, chatIsActive, conversation };
+  return { startChat, stopStream, chatIsActive, conversation, answering };
 }

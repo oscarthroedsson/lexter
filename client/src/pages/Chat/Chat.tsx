@@ -6,7 +6,7 @@ import useChat from "@/hooks/useChat";
 import TypeWriterText from "@/components/animation/TypeWriterText";
 
 export default function Chat() {
-  const { startChat, conversation } = useChat("/chat");
+  const { startChat, conversation, answering } = useChat("/chat");
   const [message, setMessage] = useState<string>("");
 
   function sendMessage() {
@@ -29,7 +29,15 @@ export default function Chat() {
           );
         })}
       </div>
-      <div className="gap-1 space-y-2 bg-pink-100">
+      <div className=" space-y-2">
+        <div
+          className={`flex gap-2 items-center bg-slate-200 p-2 rounded-md transition-opacity ${
+            answering ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div className="h-2 w-2 bg-teal-500 rounded-full animate-ping ml-2" />
+          <p className="text-[11px] font-medium">Lexter förbereder ett svar</p>
+        </div>
         <div className="w-full flex items-center gap-1">
           <Input
             id="message"
