@@ -5,11 +5,12 @@ config();
 
 import bodyParser from "body-parser"; // Middleware to parse incoming request bodies
 import cors from "cors"; // Middleware to handle Cross-Origin Resource Sharing (CORS)
-
+import "./config/openAi";
 import express from "express"; // Web framework for building the server
 import morgan from "morgan"; // Middleware for HTTP request logging
 import routes from "@/routes/index"; // Application routes for API endpoints
 import { configureSocket } from "@/config/socketio"; // Configures and initializes Socket.IO
+
 // import "module-alias/register";
 const port = process.env.PORT;
 

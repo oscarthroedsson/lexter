@@ -1,5 +1,6 @@
 import { Server } from "socket.io";
 import http from "http";
+import { chatSocket } from "@/service/streamChat";
 
 export const configureSocket = (server: http.Server) => {
   const io = new Server(server, {
@@ -12,7 +13,7 @@ export const configureSocket = (server: http.Server) => {
     console.log(`🧦 New client connected: ${socket.id}`);
 
     // functions to be run
-
+    chatSocket(socket);
     // Listen on "startStream"
     socket.on("startStream", ({ streamKey, query }) => {
       console.log(`Stream started: ${streamKey} with query`, query);
