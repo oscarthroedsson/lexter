@@ -1,87 +1,103 @@
+import art from "../assets/images/teachers/art.jpeg";
+import biology from "../assets/images/teachers/Biology.jpeg";
+import chemistry from "../assets/images/teachers/chemistry.jpeg";
+import crafts from "../assets/images/teachers/crafts.jpeg";
+import english from "../assets/images/teachers/English.jpeg";
+import geography from "../assets/images/teachers/geography.jpeg";
+import history from "../assets/images/teachers/History.jpeg";
+import math from "../assets/images/teachers/Math.jpeg";
+import music from "../assets/images/teachers/music.jpeg";
+import physics from "../assets/images/teachers/physics.jpeg";
+import science from "../assets/images/teachers/Science.jpeg";
+import social from "../assets/images/teachers/socials.jpeg";
+import sport from "../assets/images/teachers/sport.jpg";
+import swedish from "../assets/images/teachers/swedish.jpeg";
+import technology from "../assets/images/teachers/technology.jpeg";
+
 export const teachers = [
   {
     name: "Kim",
     subject: "matematik",
-    image: "",
+    image: math,
   },
   {
     name: "Helena",
     subject: "svenska",
-    image: "",
+    image: swedish,
   },
   {
     name: "Tara",
     subject: "engelska",
-    image: "",
+    image: english,
   },
   {
     name: "Martin",
     subject: "historia",
-    image: "",
+    image: history,
   },
   {
     name: "Monika",
     subject: "geografi",
-    image: "",
+    image: geography,
   },
   {
     name: "Henrik",
     subject: "biologi",
-    image: "",
+    image: biology,
   },
   {
     name: "Albert",
     subject: "fysik",
-    image: "",
+    image: physics,
   },
   {
     name: "Jonas",
     subject: "kemi",
-    image: "",
+    image: chemistry,
   },
   {
     name: "Camilla",
     subject: "samhällskunskap",
-    image: "",
+    image: social,
   },
-  {
-    name: "",
-    subject: "religionskunskap",
-    image: "",
-  },
+  // {
+  //   name: "",
+  //   subject: "religionskunskap",
+  //   image: "",
+  // },
   {
     name: "Oscar",
     subject: "idrott och hälsa",
-    image: "",
+    image: sport,
   },
   {
     name: "Alf",
     subject: "teknik",
-    image: "",
+    image: technology,
   },
   {
     name: "Daniel",
     subject: "musik",
-    image: "",
+    image: music,
   },
   {
     name: "Joakim",
     subject: "bild",
-    image: "",
+    image: art,
   },
   {
     name: "Bo",
     subject: "slöjd",
-    image: "",
+    image: crafts,
   },
   {
     name: "Ebba",
     subject: "naturkunskap",
-    image: "",
+    image: science,
   },
-  {
-    name: "",
-    subject: "kunskapsprov",
-    image: "",
-  },
+  // {
+  //   name: "",
+  //   subject: "kunskapsprov",
+  //   image: "",
+  // },
 ];
