@@ -4,7 +4,7 @@ export default function StudentHeader() {
   return (
     <Select required={true}>
       <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Skol nivå" />
+        <SelectValue placeholder="Skolnivå" />
       </SelectTrigger>
       <SelectContent>
         {schoolLevels.map((level: string) => (
