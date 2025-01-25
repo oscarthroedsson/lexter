@@ -2,7 +2,7 @@ import { openai } from "../config/openAi";
 
 export async function chatAI(contentPrompt: string) {
   try {
-    const recipeDescription = await openai.chat.completions.create({
+    const conversation = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
         {
@@ -17,7 +17,7 @@ export async function chatAI(contentPrompt: string) {
       max_tokens: 100,
     });
 
-    return recipeDescription.choices[0].message.content;
+    return conversation.choices[0].message.content;
   } catch (error) {
     console.log("⚠️ ERROR CHAT-GPT: ", error);
     return null;
