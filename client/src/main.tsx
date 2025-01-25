@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<App />} />
 
-        <Route path="/chat" element={<Chat />} />
+        <Route path="/chat/:subject/:teacher" element={<Chat />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

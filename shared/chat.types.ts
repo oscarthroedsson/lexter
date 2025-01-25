@@ -11,3 +11,11 @@ export type StreamKeyMap = {
 export type StreamKey = keyof StreamKeyMap;
 
 // Klient-till-server händelser
+
+export interface User {
+  name: string;
+  schoolLevel: string;
+  image: string;
+  thumbNail: string;
+  avatar: string;
+}

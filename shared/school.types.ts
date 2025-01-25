@@ -1,5 +1,11 @@
+export interface Teacher {
+  name: string;
+  subject: SchoolSubjects;
+  image: string;
+  thumbNail: string;
+  avatar: string;
+}
 export type SchoolLevel = "lågstadiet" | "mellanstadiet" | "högstadiet" | "gymnasiet" | "universitet";
-
 export type SchoolSubjects =
   | "matematik"
   | "svenska"
